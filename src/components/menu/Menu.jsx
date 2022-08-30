@@ -14,7 +14,7 @@ export default function Menu({menuOpen,setMenuOpen}) {
                 <a href="#works">Works</a>
             </li>
             <li>
-                <a href="#testimonials">Testimonials</a>
+                <a href="#skills">Skills</a>
             </li>
             <li>
                 <a href="#contact">Contact</a>
