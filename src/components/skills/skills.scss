@@ -1,15 +1,27 @@
+@import "../../global.scss";
+
 .skills{
     background-color: whitesmoke;
     text-align: center;
+    box-sizing: border-box;
 
     h1{
         font-size: 3rem;
+
+        @include mobile{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
     }
 
 
     .container{
         display: flex;
         height: 90%;
+
+        @include mobile{
+            flex-direction: column;
+        }
     
         .left{
             flex: 1;
@@ -18,7 +30,7 @@
             align-items: center;
     
             .inside-left{
-                width: 60%;
+                min-width: 60%;
                 min-height: 85%;  
                 display: flex;
                 align-items: center;  
@@ -27,6 +39,12 @@
                 background-color: rgb(224, 224, 223);
                 border-radius: 12.5%;
                 
+                @include mobile{
+                    width: 90%;
+                    border-radius: 2%;
+                }
+
+               
                 
                 .skillBox{
                     margin: 1rem;
@@ -37,10 +55,20 @@
                     justify-content: center;
                     align-items: center;
                     padding: 1rem;
+
+                    @include mobile{
+                        margin: 0.2rem;
+                    }
+                    
     
                     img{
                         height: 5rem;
                         width: 5rem;
+
+                        @include mobile{
+                            height: 2.8rem;
+                            width: 2.8rem;
+                        }
                     }
                 }
                 
@@ -50,13 +78,11 @@
     
         .right{
             flex: 1;
-            // background-color: coral;
             display: flex;
             justify-content: center;
             align-items: center;
 
             .container{
-                // background-color: chartreuse;s
                 width: 80%;
                 height: 80%;
                 display: flex;
@@ -64,23 +90,53 @@
                 justify-content: space-around;
                 align-items: center;
 
+                @include mobile{
+                    width: 100%;
+                }
+
                 .edu{
                     box-sizing: border-box;
                     background-color: rgb(232, 232, 231);
                     border-radius: 1.8rem;
-                    height: 8rem;
+                    min-height: 6rem;
                     width: 90%;
                     padding: 1rem;
+                    margin-top: 0.2rem;
                     font-family: sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+
+                    @include mobile{
+                        padding: 5px;
+                        min-height: 4rem;
+                        border-radius: 1rem;
+                        overflow: hidden;
+                    }
 
                     h3{
                         font-size: 1.5rem;
-                        font-weight: 650;
+                        font-weight: 500;
+
+                        @include mobile{
+                            font-size: 1rem;
+                        }
                     }
                     p{
                         margin-top: 5px;
                         color: crimson;
-                        font-weight: 450;
+                        font-weight: 400;
+
+                        @include mobile{
+                            font-size: 0.8rem;
+                        }
+
+                        .year{
+                            @include mobile{
+                                display: none;
+                            }  
+                        }
                     }
                 }
             }

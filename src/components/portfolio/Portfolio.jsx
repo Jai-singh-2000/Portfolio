@@ -1,6 +1,6 @@
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 import {featuredPortfolio,reactPortfolio,webPortfolio} from "../../data";
 import { useEffect } from "react";
 
@@ -43,10 +43,10 @@ export default function Portfolio() {
   return (
     
     <div className='portfolio' id="portfolio">
-      <h1>Projects</h1>
+      <h1>Portfolio</h1>
       <ul>
         {list.map((item)=>{
-          return <PortfolioList title={item.title} key={item.id} id={item.id} active={selected===item.id} setSelected={setSelected}/>
+          return <PortfolioList key={item.title} title={item.title} id={item.id} active={selected===item.id} setSelected={setSelected}/>
         })}
       </ul>
 
@@ -55,19 +55,20 @@ export default function Portfolio() {
         
         {data.map((item)=>{
         
-        return <>
+        return <React.Fragment key={item.id}>
 
-          <a href={item.link} target="_blank">
-          <div className="item">
+          <a key={item.link} href={item.link} target="_blank">
 
-            <img src={item.img} alt="" />
-            <h3>{item.title}</h3>
-             
-          </div>
+            <div className="item">
+              <img src={item.img} alt="" />
+              <h3>{item.title}</h3>
+            </div>
+          
           </a>
-         </>
+         </React.Fragment>
 
         })}
+
       </div>
 
       

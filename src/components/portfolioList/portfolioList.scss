@@ -8,6 +8,10 @@
     cursor: pointer;
     overflow-y: hidden;
 
+    // @include ipad{
+    //     font-size: 1.5rem;
+    // }
+
     &.active{
         background-color: $mainColor;
         color:white;

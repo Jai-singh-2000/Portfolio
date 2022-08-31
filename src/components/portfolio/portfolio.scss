@@ -5,11 +5,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    box-sizing: border-box;
 
     h1{
         font-size: 50px;
         overflow-y: hidden;
+
+        @include mobile{
+            font-size: 45px;
+            margin-bottom: 1.5rem;
+        }
     }
 
     ul{
@@ -18,11 +23,13 @@
         list-style: none;
         display: flex;
         
-        
+        @include mobile{ 
+            flex-wrap: wrap;
+        }
     }
 
     .container{
-        width: 70%;
+        min-width: 75%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -30,7 +37,14 @@
         position: relative;
         flex-shrink: 2;
         overflow: hidden;
-    
+        
+        @include mobile{
+            width: 100%;
+        }
+
+        @include tab{
+            width: 50%;
+        }
 
         .item{
             width:18rem;
@@ -42,11 +56,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all .6s easec ;
+            transition: all .6s ease;
+
+            @include mobile{
+                height: 7rem;
+                width: 7rem;
+                margin:2.5rem 5px;
+            }
 
             h3{
                 position: absolute;
                 font-size: 20px;
+
+                @include mobile{
+                    font-size: 8px;
+                }
             }
 
             img{
