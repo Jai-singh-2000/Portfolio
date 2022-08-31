@@ -18,3 +18,10 @@ $tab_width:1280px;
 };
 
 
+@mixin mid {
+    @media (min-device-width:768px) and (max-device-width:1460px) {
+        @content
+    }
+};
+
+

@@ -1,6 +1,7 @@
 import { useState,useRef } from "react";
 import "./contact.scss";
 import emailjs from '@emailjs/browser';
+import {FcLike} from "react-icons/fc";
 
 export default function Contact() {
 
@@ -44,7 +45,7 @@ export default function Contact() {
             <textarea name="message" ref={messageRef} placeholder="Message"></textarea>
             <button type="submit">Send</button>
 
-            {message&&<span>Thanks, I'll reply as soon as possible ♥</span>}
+            {message&&<span>Thanks, I'll reply as soon as possible <FcLike/></span>}
           </form>
 
       </div>

@@ -10,7 +10,7 @@ export default function Topbar({menuOpen,setMenuOpen}) {
       <div className="wrapper">
         
         <div className="left">
-          <a href="#intro" className="logo">Jai.</a>
+          <a href="#intro" className="logo"><span>Jai.</span></a>
 
           <div className="itemContainer">
             <BsFillPersonFill className="icon"/>

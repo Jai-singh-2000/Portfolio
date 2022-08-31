@@ -46,6 +46,10 @@
             width: 50%;
         }
 
+        @include mid{
+            width: 100%;
+        }
+
         .item{
             width:18rem;
             height: 14rem;
@@ -56,12 +60,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all .6s ease;
+            transition: all 0.2s ease;
 
             @include mobile{
                 height: 7rem;
                 width: 7rem;
                 margin:2.5rem 5px;
+            }
+
+
+            @include mid{
+                height: 13rem;
+                width: 16rem;
             }
 
             h3{
@@ -81,7 +91,7 @@
             }
 
             &:hover{
-                background-color: #277BC0;
+                background-color: #6b7379;
                 img{
                     opacity: 0.2;
                     z-index: 0;
